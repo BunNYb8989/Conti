@@ -42,14 +42,14 @@ CLICK on Complite (for task 2)
 <br/>
 <br/>
 </p>
-error messages in Exchange server admin and employees outlook
 
 Microsoft Exchange Server: is a mail server and calendaring server developed by Microsoft. It runs exclusively on Windows Server operating systems and is designed to manage various forms of digital communication within an organization
 
 Exchange Server integrates seamlessly with other Microsoft products, such as Outlook and SharePoint, to create a unified communication environment
 
-
 TASK: You are assigned to investigate this situation. Use SPLUNK to answer the questions below regarding the Conti ransomware. 
+
+# start the Meachine
 
 <p align="center">
 <b>Root User</b>
@@ -61,33 +61,153 @@ TASK: You are assigned to investigate this situation. Use SPLUNK to answer the q
 
 Question 1: Can you identify the location of the ransomware?
 
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_1.png"/>
+<br/>
+<br/>
+</p>
 
 Question 2: What is the Sysmon event ID for the related file creation event?
 
+Sysmon Event ID 11: This event is logged by Sysmon (System Monitor) when a file is created or overwritten. It's useful for monitoring critical locations like the Startup folder, temporary directories, and download directories, which are common targets for malware
+
 Question 3: Can you find the MD5 hash of the ransomware?
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_3.png"/>
+<br/>
+<br/>
+</p>
 
 Question 4: What file was saved to multiple folder locations?
 
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_4.png"/>
+<br/>
+<br/>
+</p>
+
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_4.1.png"/>
+<br/>
+<br/>
+</p>
+
+
 Question 5: What was the command the attacker used to add a new user to the compromised system?
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_5.png"/>
+<br/>
+<br/>
+</p>
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_5.1.png"/>
+<br/>
+<br/>
+</p>
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_5.2.png"/>
+<br/>
+<br/>
+</p>
+
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_5final.png"/>
+<br/>
+<br/>
+</p>
 
 Question 6: The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?
 
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_6.png"/>
+<br/>
+<br/>
+</p>
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_6.2.png"/>
+<br/>
+<br/>
+</p>
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_6final.png"/>
+<br/>
+<br/>
+</p>
+
 Question 7: The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?
+
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_7.png"/>
+<br/>
+<br/>
+</p>
 
 Question 8: What is the web shell the exploit deployed to the system?
 hint: IIS logs for post requests
 Internet Information Services (IIS) it host websites ,application using microsoft technology including (aspx_file)
 
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_8.png"/>
+<br/>
+<br/>
+</p>
 
 Question 9: What is the command line that executed this web shell?
 attrib.exe  -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\i3gfPctK1c2x.aspx
 
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_9.png"/>
+<br/>
+<br/>
+</p>
 
 Question 10: What three CVEs did this exploit leverage?
 
 CVE-2020-0796,CVE-2018-13374,CVE-2018-13379
 
-
+<p align="center">
+<b>Root User</b>
+<br/>
+  <img src="q_10.png"/>
+<br/>
+<br/>
+</p>
 
 
 
