@@ -52,7 +52,7 @@ TASK: You are assigned to investigate this situation. Use SPLUNK to answer the q
 
 <p align="center">
 <br/>
-  <img src="Start_Meachine.png"/>
+  <img src="Start_Machine.png"/>
 <br/>
 <br/>
 </p>
