@@ -4,7 +4,6 @@ RANSOMWARE LAB by Tryhackme
 This challenge involves Splunk to investigate an Exchange server that was compromised . By the Conti ransomware. At of the lab we learn how the attackers compromised the server.
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="Screenshot 2024-11-08 120457.png"/>
 <br/>
@@ -25,18 +24,18 @@ Splunk log analysis
 
 # Task 1
 Some employees from your company reported that they can’t log into Outlook. The Exchange system admin also reported that he can’t log in to the Exchange Admin Center. After initial triage, they discovered some weird readme files settled on the Exchange server.  (ransomware note which is readme.file --conti(ransom))
+
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="TASK_1.png"/>
 <br/>
 <br/>
 </p>
+
 CLICK on Complite (for task 2)
 
 # Task 2
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="TASK_2.png"/>
 <br/>
@@ -52,7 +51,6 @@ TASK: You are assigned to investigate this situation. Use SPLUNK to answer the q
 # start the Meachine
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="START_Meachine.png"/>
 <br/>
@@ -70,7 +68,6 @@ index=* | top limit=100 Image
 ```
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_1.png"/>
 <br/>
@@ -92,7 +89,6 @@ got to the ransomware location click on view events & select field type (filter 
 ```
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_3.png"/>
 <br/>
@@ -114,7 +110,6 @@ agine we are looking for file creation event
 By looking at TargetFileName field and see readme.txt stored in multiple locations.
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_4.1.png"/>
 <br/>
@@ -126,7 +121,6 @@ Question 5: What was the command the attacker used to add a new user to the comp
 
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_5.png"/>
 <br/>
@@ -137,7 +131,6 @@ Question 5: What was the command the attacker used to add a new user to the comp
 ```index=* Event Code=4720 ```
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_5.1.png"/>
 <br/>
@@ -147,7 +140,6 @@ Question 5: What was the command the attacker used to add a new user to the comp
 click on ``` 4270 ```
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_5.2.png"/>
 <br/>
@@ -158,7 +150,6 @@ click on ``` 4270 ```
 click on command line (under intersting filed)
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_5final.png"/>
 <br/>
@@ -176,7 +167,6 @@ index=* Event Code=8
 click on 8
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_6.png"/>
 <br/>
@@ -186,7 +176,6 @@ click on 8
 look for image click it 
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_6.2.png"/>
 <br/>
@@ -196,7 +185,6 @@ look for image click it
 click for unsecapp look at sourceimage & targetimage
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_6final.png"/>
 <br/>
@@ -213,7 +201,6 @@ index=* sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=
 This process deals with authentication and authorization services for the system and handles hashes as well & NT , LM , KERBEROS TICKETS
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_7.png"/>
 <br/>
@@ -233,7 +220,6 @@ If we look at task 2 in error message coudnot found aspx file
 
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_8.png"/>
 <br/>
@@ -248,7 +234,6 @@ attrib.exe  -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Ex
 overall the command is to remove read only from i3gfPctK1c2x.aspx(this) file which is located at authencation at outlook webapp or exchange server
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_9.png"/>
 <br/>
@@ -260,7 +245,6 @@ Question 10: What three CVEs did this exploit leverage?
 CVE-2020-0796,CVE-2018-13374,CVE-2018-13379
 
 <p align="center">
-<b>Root User</b>
 <br/>
   <img src="q_10.png"/>
 <br/>
